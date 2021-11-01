@@ -1,0 +1,39 @@
+from typing import Text
+from random import randint
+
+def chat_bot(Text1, Name):
+    if Text1 == "Hello":
+        print("Hi, " + Name + " would you like to buy my Mask?")
+    elif Text1 == "Hi":
+        print("Hey, " + Name + " would you like to buy my Mask?")
+    else:
+        print("Hello, " + Name + " would you like to buy my Mask?")
+    print("Yes or No?")
+    Answer = input()
+    n = 1
+    while n <= 1 and Answer == "No":
+            print("please....")
+            Answer2 = input()
+            if Answer2 == "No":
+                print("please....")
+                print("Please....")
+                print("PLEASE....")
+            elif Answer2 == "Yes":
+                n += 1
+            else:
+                print("Sorry, I don't understand")
+    for p in range(10):
+        price = randint(9, 19)
+    print("Thanks! The price is " + str(price) + " THB")
+    print("How much do you have?")
+    wallet = input("")
+    if int(wallet) >= price:
+        change = int(wallet) - price
+        print("Your change is " + str(change) + " THB. Thankyou for your purchase!")
+    else:
+        require = price - int(wallet)
+        print("You'll need " + str(require) + " THB")
+                 
+
+        
+chat_bot("hi", "Matt")
